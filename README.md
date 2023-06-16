@@ -25,5 +25,5 @@ MIT Licenceに則った形で公開しています。
 
 - [DxLib](https://dxlib.xsrv.jp/)  
 DX Library Copyright (C) 2001-2023 Takumi Yamada.  
-- [JetBrains Clion](https://www.jetbrains.com/clion/)
-Copyright © 2000-2023 JetBrains s.r.o.
+- [JetBrains Clion](https://www.jetbrains.com/clion/)  
+Copyright © 2000-2023 JetBrains s.r.o.  
