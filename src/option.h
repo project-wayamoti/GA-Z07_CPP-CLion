@@ -21,6 +21,48 @@ float getDistance(float x1, float y1, float x2, float y2) {
     return sqrt((dx * dx) + (dy * dy));
 }
 
+// ##### 外積計算関数 #####
+// 参考文献 : ゲームアルゴリズム Z07 7ページ目資料
+// 引数     : x1, y1, x2, y2
+// 戻り値   : 外積
+// 注意     : なし
+float getCrossProduct(float x1, float y1, float x2, float y2) {
+    return x1 * y2 - y1 * x2;
+}
+
+// ##### 内積計算関数 #####
+// 参考文献 : ゲームアルゴリズム Z07 12ページ目資料
+// 引数     : x1, y1, x2, y2
+// 戻り値   : 内積
+// 注意     : なし
+float getDotProduct(float x1, float y1, float x2, float y2) {
+    return x1 * x2 + y2 * y1;
+}
+
+// ##### 内積と外積を計算して点と点の間だったらtrueを返す #####
+// 参考文献 : なし
+// 引数     : x1, y1, x2, y2, x3, y3
+// 戻り値   : 点と点の間だったらtrue
+// 注意     : なし
+bool isPointBetween(float x1, float y1, float x2, float y2, float x3, float y3) {
+    // 点と点の間かどうかを判定する
+    // 2つの円の中心座標の差分を計算（相対ベクトル）
+    float dx1 = x2 - x1; // 目的の地点 - 現在の地点
+    float dy1 = y2 - y1;
+    float dx2 = x3 - x1; // 目的の地点 - 現在の地点
+    float dy2 = y3 - y1;
+    // 外積を計算
+    float crossProduct = getCrossProduct(dx1, dy1, dx2, dy2);
+    // 内積を計算
+    float dotProduct = getDotProduct(dx1, dy1, dx2, dy2);
+    // 点と点の間の幅前後100に侵入してきたらtrueを返す
+    if (crossProduct >= -10 || crossProduct <= 10 && dotProduct >= 0) {
+        return true;
+    }
+    // 内積と外積を計算して点と点の間だったらtrueを返す
+    else return false;
+}
+
 // ##### ランダムな値を返却する関数 #####
 // 参考文献 : http://vivi.dyndns.org/tech/cpp/random.html
 // 引数     : min, max
