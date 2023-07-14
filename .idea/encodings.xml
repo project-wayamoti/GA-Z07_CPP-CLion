@@ -2,7 +2,7 @@
 <project version="4">
   <component name="Encoding" defaultCharsetForPropertiesFiles="Shift_JIS">
     <file url="file://$PROJECT_DIR$/src/main.cpp" charset="Shift_JIS" />
-    <file url="file://$PROJECT_DIR$/src/option.h" charset="Shift_JIS" />
+    <file url="file://$PROJECT_DIR$/src/vector.h" charset="Shift_JIS" />
     <file url="PROJECT" charset="Shift_JIS" />
   </component>
 </project>
