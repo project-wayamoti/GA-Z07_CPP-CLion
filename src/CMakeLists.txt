@@ -1,4 +1,4 @@
-add_executable(main main.cpp option.h)
+add_executable(main main.cpp vector.h utils.h)
 
 # 以下でDXライブラリをinclude, linkします
 # 注意：この例ではDXライブラリの「３Ｄモデル機能＆ソフトウエアレンダリング機能無しパッケージ」を使用していますが、
