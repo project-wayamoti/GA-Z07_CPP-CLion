@@ -140,24 +140,6 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
         float dotV1 = getDotProduct(relativeVector1.x, relativeVector1.y, relativeVector2.x, relativeVector2.y);
         float dotV2 = getDotProduct(relativeVector3.x, relativeVector3.y, relativeVector4.x, relativeVector4.y);
 
-        //ŠOÏ‚ª³‚ÌŽž‚ÍŽžŒv‰ñ‚èA•‰‚ÌŽž‚Í”½ŽžŒv‰ñ‚è
-        if (cross > 0) {
-            printfDx("ŽžŒv‰ñ‚è\n");
-        } else if (cross < 0) {
-            printfDx("”½ŽžŒv‰ñ‚è\n");
-        } else {
-            printfDx("’¼ü\n");
-        }
-
-        //“àÏ‚ª³‚ÌŽž‚Í“ÝŠpA•‰‚ÌŽž‚Í‰sŠp
-        if (dotV1 > 0) {
-            printfDx("“ÝŠp\n");
-        } else if (dotV1 < 0) {
-            printfDx("‰sŠp\n");
-        } else {
-            printfDx("’¼Šp\n");
-        }
-
         if(dotV1 > 0 && dotV2 > 0 && cross < 50) {
             gameStop(1);
             break;
