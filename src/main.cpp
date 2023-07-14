@@ -6,8 +6,7 @@
 //## 環境に応じて設定
 #define WIDTH 1280
 #define HEIGHT 720
-#define SPEED 1 \
-// 移動速度 60Hz=8, 300Hz=1
+#define SPEED 8 // 移動速度 60Hz=8, 300Hz=1
 using namespace std;
 
 // 時間の初期値を取得
@@ -164,24 +163,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
             break;
         }
 
-        //##### 当たり判定
-        // もしposがenemy1とenemy2の間に侵入してきたら
-        //if (isPointBetween(pos.x, pos.y, enemy1.x, enemy1.y, enemy2.x, enemy2.y)) {
-        //    printfDx("当たった\n");
-        //}
-
-        bool hoge = isPointBetween(pos.x, pos.y, enemy1.x, enemy1.y, enemy2.x, enemy2.y);
-
         //##### 描画処理
-        /* デバッグ用
-        printfDx();
-        */
-        printfDx("Player Pos: X:%.2f Y:%.2f\n", pos.x, pos.y);
-        printfDx("Enemy1 Pos: X:%.2f Y:%.2f\n", enemy1.x, enemy1.y);
-        printfDx("Enemy2 Pos: X:%.2f Y:%.2f\n", enemy2.x, enemy2.y);
-        printfDx("Cross: %.2f\n", cross);
-        printfDx("Dot: %.2f\n", dotV1);
-        printfDx("Dot: %.2f\n", dotV2);
 
         // enemy1とenemy2の間に線を引く
         DrawLine(enemy1.x, enemy1.y, enemy2.x, enemy2.y, blue);
